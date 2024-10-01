@@ -64,6 +64,18 @@ form button:hover{
 
 
 /* style the alart  */
+.overly{
+  position:fixed;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  background-color: rgba(185, 185, 185, 0.514);
+  z-index: 2;
+}
+.hide-overly{
+  display: none;
+}
 .notification{
   display: flex;
   flex-direction: column;
@@ -75,8 +87,10 @@ form button:hover{
   position: absolute;
   top:-100%;
   transition: top .5s ease-in;
+  z-index: 10;
 
 }
+
 .show-notification{
   top:15%
 }

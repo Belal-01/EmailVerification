@@ -10,6 +10,7 @@ const sendEmail = (e) => {
   e.preventDefault()
  const form =  document.getElementById('emailForm')
 
+
 //  console.log(email.value)
 //  console.log(message.value)
 // console.log(form)
@@ -22,6 +23,9 @@ emailjs
     .then(
       () => {
         document.getElementById('notfi').classList.add('show-notification')
+        document.getElementById('overly').classList.remove('hide-overly')
+        
+  
         // alert('Message has been sent successfully')
       },
       (error) => {
@@ -33,7 +37,12 @@ emailjs
 
 
 // add event listner for notification button to close the modle
-
+const email =  document.getElementById('email');
+const message =  document.getElementById('message')
 document.getElementById('notfi-btn').addEventListener('click',()=>{
-  document.getElementById('notfi').classList.remove('show-notification')
+  document.getElementById('notfi').classList.remove('show-notification');
+  document.getElementById('overly').classList.add('hide-overly')
+  email.value = ''
+  message.value = ''
+
 })
