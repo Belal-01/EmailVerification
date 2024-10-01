@@ -95,3 +95,9 @@ form button:hover{
   cursor: pointer;
 
 }
+
+@media (max-width:420px) {
+  .email-Verificatin form{
+    width:300px;
+  }
+}
