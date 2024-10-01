@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "eZs_1JGJBa7Dj7XjM",
+      });
+   })();
+</script>
+  <title>Email Verification</title>
+</head>
+<body>
+
+  <section class="email-Verificatin">
+
+    <!--Contact form -->
+    <span >Enter Email and send a message :</span>
+    <form id="emailForm">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="userEmail" placeholder="Email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" id="" placeholder="Message" required></textarea>
+      <button>Send Message</button>
+    </form>
+
+
+    <!-- Notification Modle -->
+    <div id="notfi" class="notification ">
+
+      <div class="notification-message">
+        Message has been sent successfully
+      </div>
+      <div class="notification-button">
+        <button id="notfi-btn">
+          Close
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  
+
+  <script src="./script.js"></script>
+</body>
+</html>
